@@ -74,7 +74,7 @@ if (!!(window.history && history.pushState)) {
   var initHistory = function() {
     var list = document.getElementById('list');
 
-    addEvent(list, 'click', function (event) {
+    addEvent(list, 'onclick', function (event) {
       if (event.target.nodeName == 'A' && event.target.innerHTML.indexOf('/') !== -1) {
         event.preventDefault();
         swapPage(event.target.href);
